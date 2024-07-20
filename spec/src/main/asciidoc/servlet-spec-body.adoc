@@ -184,28 +184,19 @@ Typical sequence of events:
         *** -- ensures that -> the response is properly flushed
         *** -- returns control back to -- host web server
 
-=== Comparing Servlets with Other Technologies
+=== Servlets vs Other Technologies
 
-In functionality, servlets provide a higher
-level abstraction than Common Gateway Interface (CGI) programs but a
-lower level of abstraction than that provided by web frameworks such as
-Jakarta Server Faces.
-
-Servlets have the following advantages over
-other server extension mechanisms:
-
-* They are generally much faster than CGI
-scripts because a different process model is used.
-
-* They use a standard API that is supported by
-many web servers.
-
-* They have all the advantages of the Java
-programming language, including ease of development and platform
-independence.
-
-* They can access the large set of APIs
-available for the Java platform.
+* vs Common Gateway Interface (CGI)
+    ** higher level abstraction
+    ** much faster
+        *** Reason: 🧠 different process model is used 🧠
+* vs other web frameworks (_Example:_ Jakarta Server Faces)
+    ** lower level abstraction
+* standard API / -- supported by -- many web servers
+* ALL advantages of the Java programming language
+    ** ease of development
+    ** platform independence
+* -- access to -- large set of APIs / available for the Java platform
 
 == The Servlet Interface
 
