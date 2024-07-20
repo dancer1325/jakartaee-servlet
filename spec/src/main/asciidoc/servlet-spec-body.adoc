@@ -200,14 +200,14 @@ Typical sequence of events:
 
 == The Servlet Interface
 
-
-The `Servlet` interface is the central
-abstraction of the Jakarta Servlet API. All servlets implement this
-interface either directly, or more commonly, by extending a class that
-implements the interface. The two classes in the Jakarta Servlet API that
-implement the `Servlet` interface are `GenericServlet` and `HttpServlet`.
-For most purposes, Developers will extend `HttpServlet` to implement
-their servlets.
+* == ⭐ central abstraction of the Jakarta Servlet API ⭐
+    ** implemented by ALL servlets
+        *** directly OR
+        *** indirectly (== extend a class / implements the interface)
+    ** classes | Jakarta Servlet API / implement the `Servlet` interface
+        *** `GenericServlet`
+        *** `HttpServlet`
+            **** 👁️most common one 👁️
 
 === Request Handling Methods
 
