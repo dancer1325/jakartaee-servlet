@@ -46,10 +46,10 @@ Comments to: servlet-dev@eclipse.org
 
 === API Reference
 
-The full specifications of classes, interfaces,
-and method signatures that define the Jakarta Servlet API, as well as their
-accompanying Javadoc™ documentation, is available online at
-`https://jakarta.ee/specifications/servlet`.
+* Check
+    ** `https://jakarta.ee/specifications/servlet` or
+    ** "../api"
+
 
 === Other Jakarta Platform Specifications
 
@@ -72,76 +72,45 @@ those specifications that target Jakarta EE 8 due to the different name-space us
 
 === Other Important References
 
-The following Internet specifications provide
-information relevant to the development and implementation of the Jakarta
-Servlet API and standard servlet engines:
-
-* RFC 1630 Uniform Resource Identifiers (URI)
-
-* RFC 1738 Uniform Resource Locators (URL)
-
-* RFC 3986 Uniform Resource Identifiers (URI):
-Generic Syntax
-
-* RFC 1945 Hypertext Transfer Protocol (HTTP/1.0)
-
-* RFC 2045 MIME Part One: Format of Internet Message Bodies
-
-* RFC 2046 MIME Part Two: Media Types
-
-* RFC 2047 MIME Part Three: Message Header Extensions for non-ASCII text
-
-* RFC 2048 MIME Part Four: Registration Procedures
-
-* RFC 2049 MIME Part Five: Conformance Criteria and Examples
-
-* RFC 6265 HTTP State Management Mechanism
-
-* RFC 7258 Pervasive Monitoring Is an Attack
-
-* RFC 7541 HPACK: Header Compression for HTTP/2 (HPACK)
-
-* RFC 7301 Transport Layer Security (TLS)
-Application-Layer Protocol Negotiation Extension (ALPN)
-
-* RFC 7168 The Hyper Text Coffee Pot
+* http://www.ietf.org/rfc/[RFCs], related to the
+    ** development and implementation of the
+        *** Jakarta Servlet API
+        *** Jakarta standard servlet engines
+    ** Check
+        *** RFC 1630 Uniform Resource Identifiers (URI)
+        *** RFC 1738 Uniform Resource Locators (URL)
+        *** RFC 3986 Uniform Resource Identifiers (URI):Generic Syntax
+        *** RFC 1945 Hypertext Transfer Protocol (HTTP/1.0)
+        *** RFC 2045 MIME Part One: Format of Internet Message Bodies
+        *** RFC 2046 MIME Part Two: Media Types
+        *** RFC 2047 MIME Part Three: Message Header Extensions for non-ASCII text
+        *** RFC 2048 MIME Part Four: Registration Procedures
+        *** RFC 2049 MIME Part Five: Conformance Criteria and Examples
+        *** RFC 6265 HTTP State Management Mechanism
+        *** RFC 7258 Pervasive Monitoring Is an Attack
+        *** RFC 7541 HPACK: Header Compression for HTTP/2 (HPACK)
+        *** RFC 7301 Transport Layer Security (TLS): Application-Layer Protocol Negotiation Extension (ALPN)
+        *** RFC 7168 The Hyper Text Coffee Pot
 Control Protocol for Tea Ef (HTCPCP-TEA)footnote:[This reference is mostly
 tongue-in-cheek although most of the concepts described in the HTCPCP
 -TEA RFC are relevant to all well-designed web servers.]
+        *** RFC 2119 Key words for use in RFCs to Indicate Requirement Levels
+        *** RFC 7616 HTTP Digest Access Authentication
+        *** RFC 7617 The 'Basic' HTTP Authentication Scheme
+        *** RFC 8297 An HTTP Status Code for Indicating Hints
+        *** RFC 9110 HTTP Semantics
+        *** RFC 9111 HTTP Caching
+        *** RFC 9112 HTTP/1.1
+        *** RFC 9113 HTTP/2
+        *** RFC 9114 HTTP/3
 
-* RFC 2119 Key words for use in RFCs to Indicate
-Requirement Levels
 
-* RFC 7616 HTTP Digest Access Authentication
+* World Wide Web Consortium (`http://www.w3.org/`)
+    ** source of HTTP related information
+* XML (eXtensible Markup Language)
+    ** uses
+        *** specification of the Deployment Descriptors -- Chapter 13 --
 
-* RFC 7617 The 'Basic' HTTP Authentication Scheme
-
-* RFC 8297 An HTTP Status Code for Indicating Hints
-
-* RFC 9110 HTTP Semantics
-
-* RFC 9111 HTTP Caching
-
-* RFC 9112 HTTP/1.1
-
-* RFC 9113 HTTP/2
-
-* RFC 9114 HTTP/3
-
-Online versions of these RFCs are at
-`http://www.ietf.org/rfc/`.
-
-The World Wide Web Consortium (`http://www.w3.org/`) is a definitive source
-of HTTP related information affecting this specification and its implementations.
-
-The eXtensible Markup Language (XML) is used for
-the specification of the Deployment Descriptors described in Chapter 13
-of this specification.
-
-The key words "MUST", "MUST NOT", "REQUIRED",
-"SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT
-RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in RFC2119.
 
 === Providing Feedback
 
