@@ -19,53 +19,30 @@ Comments to: servlet-dev@eclipse.org
 
 === Preface
 
-This document is the Jakarta Servlet
-Specification, version {spec-version}. The standard for the Jakarta Servlet API is
-described herein.
+* Jakarta Servlet Specification, version {spec-version}.
 
 === Additional Sources
 
-The specification is intended to be a complete
-and clear explanation of the Jakarta Servlet API, but if questions remain, the
-following sources may be consulted:
+* compatible implementation (CI) (TODO: Which one?) -- has been made -- available /
+    ** behavioral benchmark for this specification
+    ** uses
+        *** comprehend better a specification / leaves implementation of a particular feature open to interpretation
 
-* A compatible implementation (CI) has been made
-available which provides a behavioral benchmark for this specification.
-Where the specification leaves implementation of a particular feature
-open to interpretation, implementors may use the reference
-implementation as a model of how to carry out the intention of the
-specification.
+* Jakarta EE Platform TCK
+    ** goal
+        *** assessing whether implementations -- meet the -- compatibility requirements of the Jakarta Servlet API standard
 
-* The Jakarta EE Platform TCK has been
-provided for assessing whether implementations meet the compatibility
-requirements of the Jakarta Servlet API standard. The test results have
-normative value for resolving questions about whether an implementation
-is standard.
+* working group for the Jakarta Servlet API / under the Jakarta EE Working Group
+    ** == final arbiter
 
-* If further clarification is required, the
-working group for the Jakarta Servlet API under the Jakarta EE Working Group
-should be consulted, and is the final arbiter of such issues.
-
-Comments and feedback are welcome, and will be
-used to improve future versions.
 
 === Who Should Read This Specification
 
-The intended audience for this specification
-includes the following groups:
+* Web server and application server vendors / want to provide servlet engines -- conform to -- this standard
 
-* Web server and application server vendors that
-want to provide servlet engines that conform to this standard.
+* Authoring tool developers / want to support web applications -- conform to -- this specification.
 
-* Authoring tool developers that want to support
-web applications that conform to this specification.
-
-* Experienced servlet authors who want to
-understand the underlying mechanisms of servlet technology.
-
-We emphasize that this specification is not a
-user’s guide for servlet developers and is not intended to be used as
-such.
+* Experienced servlet authors / want to understand the underlying mechanisms of servlet technology.
 
 === API Reference
 
