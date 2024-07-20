@@ -136,35 +136,25 @@ specification. Please e-mail your comments to
 
 === What is a Servlet Container?
 
-The servlet container is a part of a web
-server or application server that provides the network services over
-which requests and responses are sent, decodes MIME-based requests, and
-formats MIME-based responses. A servlet container also contains and
-manages servlets through their lifecycle.
-
-A servlet container can be built into a host
-web server, or installed as an add-on component to a web server via that
-server’s native extension API. Servlet containers can also be built into
-or possibly installed into web-enabled application servers.
-
-All servlet containers must support HTTP and HTTPS as protocols for requests
-and responses, but additional request/response-based protocols may be
-supported. The required versions of the HTTP specification that a
-container must implement are HTTP/1.1 and HTTP/2. When supporting
-HTTP/2, servlet containers must support the “h2” and “h2c” protocol
-identifiers (as specified in section 3.1 of the HTTP/2 RFC). This
-implies all servlet containers must support ALPN. Because the container
-may have a caching mechanism described in RFC 9111 (HTTP Caching),
-it may modify requests from the clients before delivering them to the
-servlet, may modify responses produced by servlets before sending them
-to the clients, or may respond to requests without delivering them to
-the servlet under the compliance with RFC 9111.
-
-A servlet container may place security restrictions on the environment in which
-a servlet executes.
-
-Java SE 17 is the minimum version of the
-underlying Java platform with which servlet containers must be built.
+* == part of a web server OR application server /
+    ** provides
+        *** the network services over which
+            **** requests and responses are sent
+            **** decodes MIME-based requests
+            **** formats MIME-based responses
+    ** contains and manages servlets -- through -- their lifecycle
+    ** how to build?
+        *** -- built into a -- host web server or
+        *** as add-on component | web server -- via -- server’s native extension API
+    ** support
+        *** (mandatory) HTTP and HTTPS as protocols -- for -- requests and responses
+            **** required versions
+                ***** HTTP/1.1
+                ***** HTTP/2
+                    ****** -> servlet containers -- must support -- “h2” and “h2c” protocol identifiers -> -- must support -- ALPN
+        *** (optional) additional request/response-based protocols
+    ** -- may place -- security restrictions | environment in which a servlet executes
+* Java SE 17+ | Java platform / servlet containers must be built
 
 === An Example
 
