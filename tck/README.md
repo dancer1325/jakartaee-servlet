@@ -4,23 +4,21 @@ This repository contains the code for Jakarta Servlet TCK
 
 About Jakarta Servlet TCK
 -------------------------
-Jakarta Servlet TCK defines a server-side API for handling HTTP requests and is based on Junit5 and Arquillian.
+* == server-side API
+  * -- for handling -- HTTP requests
+  * -- based on -- Junit5 & Arquillian
 
 Building
 --------
-Prerequisites:
+* Prerequisites
+  * JDK 17+
+  * Maven 3.9.0+
+* how to build? 
+  * `mvn install`
 
-* JDK 17+
-* Maven 3.9.0+
-
-Run the build: 
-
-`mvn install`
-
-Running TCK 
+How to use?
 ------------
-You need to configure your Apache Maven build to run tests from the tck artifacts.
-This will be achieved by adding a dependency within your surefire configuration
+
 ```xml
     <dependencies>
       <dependency>
