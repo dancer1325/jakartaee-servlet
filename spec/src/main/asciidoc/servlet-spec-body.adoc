@@ -158,31 +158,31 @@ specification. Please e-mail your comments to
 
 === An Example
 
-The following is a typical sequence of events:
+Typical sequence of events:
 
-. A client (e.g., a web browser) accesses a web
-server and makes an HTTP request.
-
-. The request is received by the web server and
-handed off to the servlet container. The servlet container can be
-running in the same process as the host web server, in a different
-process on the same host, or on a different host from the web server for
-which it processes requests.
-
-. The servlet container determines which servlet
-to invoke based on the configuration of its servlets, and calls it with
-objects representing the request and response.
-
-. The servlet uses the request object to find
-out who the remote user is, what HTTP `POST` parameters may have been
-sent as part of this request, and other relevant data. The servlet
-performs whatever logic it was programmed with, and generates data to
-send back to the client. It sends this data back to the client via the
-response object.
-
-. Once the servlet has finished processing the
-request, the servlet container ensures that the response is properly
-flushed, and returns control back to the host web server.
+* client (e.g., a web browser) -- accesses a -- web server
+* client -- makes an -- HTTP request /
+    ** -- is received by -- the web server / -- handed off to -- servlet container /
+        *** servlet container can be running in
+            **** process == as the host web server process
+            **** process != host web server process, BUT same host
+            **** host != host web server
+* servlet container
+    ** -- determines, based on the configuration of its servlets, -- which servlet / invoke
+    ** -- calls -- this specific servlet / pass
+        *** object / -- represent the -- request
+        *** object / -- represent the -- response
+* servlet
+    ** -- based on the request object, determine ---
+        *** who the remote user is
+        *** what HTTP `POST` parameters / -- may have been sent as -- part of this request
+        *** other relevant data
+    ** performs whatever logic / was programmed with,
+    ** generates data / -- sent back, via the response object, to -- the client
+* servlet container
+    ** if servlet has finished processing the request
+        *** -- ensures that -> the response is properly flushed
+        *** -- returns control back to -- host web server
 
 === Comparing Servlets with Other Technologies
 
