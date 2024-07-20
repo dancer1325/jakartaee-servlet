@@ -125,6 +125,7 @@ specification. Please e-mail your comments to
 
 * := Jakarta technology-based web component /
     ** -- managed by a -- container
+        *** -> run | web server
     ** generates dynamic content
     ** -- interacts, via request-response paradigm ( / -- implemented by -- servlet engines),with -- web clients
 * == platform-independent Java classes /
