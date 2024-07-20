@@ -123,15 +123,16 @@ specification. Please e-mail your comments to
 
 === What is a Servlet?
 
-A servlet is a Jakarta technology-based web
-component, managed by a container, that generates dynamic content. Like
-other Jakarta technology-based components, servlets are
-platform-independent Java classes that are compiled to platform-neutral
-byte code that can be loaded dynamically into and run by a Jakarta
-technology-enabled web server. Containers, sometimes called servlet
-engines, are web server extensions that provide servlet functionality.
-Servlets interact with web clients via a request/response paradigm
-implemented by the servlet container.
+* := Jakarta technology-based web component /
+    ** -- managed by a -- container
+    ** generates dynamic content
+    ** -- interacts, via request-response paradigm ( / -- implemented by -- servlet engines),with -- web clients
+* == platform-independent Java classes /
+    ** -- compiled to -- platform-neutral byte code /
+        *** -- can be loaded dynamically into -- Jakarta technology-enabled web server
+        *** -- run by -- Jakarta technology-enabled web server
+* servlet engines or containers
+    ** == web server extensions / provide servlet functionality
 
 === What is a Servlet Container?
 
