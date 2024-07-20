@@ -4,6 +4,7 @@
       * -> servlet is initialized & constructed
     * `.service()`
       * if client invoked it -> handle it
+        * HTTP requests -- are dispatched to the corresponding -- handler methods / HTTP request type 
     * `.destroy()`
       * -> servlet is out of service, and then -> garbage collected
   * other methods
