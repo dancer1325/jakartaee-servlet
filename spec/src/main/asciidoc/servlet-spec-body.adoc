@@ -265,21 +265,13 @@ Typical sequence of events:
 
 === Number of Instances
 
-The servlet declaration which is either via
-the annotation as described in <<Annotations and Pluggability>> or
-part of the deployment descriptor of
-the web application containing the servlet, as described in
-<<Deployment Descriptor>>, controls how
-the servlet container provides instances of the servlet.
-
-For a servlet not hosted in a distributed
-environment (the default), the servlet container must use only one
-instance per servlet declaration.
-
-In the case where a servlet was deployed as
-part of an application marked in the deployment descriptor as
-distributable, a container may have only one instance per servlet
-declaration per Java Virtual Machine (JVM™).
+* ways to specify
+    ** annotation
+        *** Check <<Annotations and Pluggability>>
+    ** deployment descriptor of the web application / contains the servlet
+        *** Check <<Deployment Descriptor>>
+* if servlet NOT hosted | distributed environment -> servlet container -- must use -- ONLY 1 instance / servlet declaration
+* if servlet -- was deployed as part of an -- application / marked in the deployment descriptor as distributable ->  >= 1 instance / servlet declaration / Java Virtual Machine (JVM™)
 
 === Servlet Life Cycle
 
