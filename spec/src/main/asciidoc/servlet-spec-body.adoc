@@ -5629,12 +5629,8 @@ call each servlet instance’s `init()` method.
 
 === Inclusion of a web.xml Deployment Descriptor
 
-A web application is NOT required to contain a
-web.xml if it does NOT contain any servlet, filter, or listener
-components or is using annotations to declare the same. In other words
-an application containing only static files or JSP pages does not
-require a web.xml to be present.
-
+* 👁️ if a web application does NOT contain ANY servlet, filter, or listener components OR annotations / -- used to -- declare them -> NOT required to contain a web.xml 👁️
+   ** == application / contain ONLY static files or JSP pages
 
 == Application Lifecycle Events
 
