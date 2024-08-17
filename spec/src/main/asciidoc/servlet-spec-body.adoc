@@ -7459,99 +7459,84 @@ loss of session information.
 
 == Deployment Descriptor
 
-
-This chapter specifies the Jakarta Servlet
-Specification requirements for web container support of deployment
-descriptors. The deployment descriptor conveys the elements and
-configuration information of a web application between Application
-Developers, Application Assemblers, and Deployers.
-
-For Servlet {spec-version}, the deployment descriptor is defined in terms of an XML schema document.
-
-For backwards compatibility of applications
-written to previous versions of the API, any deployment descriptors
-written to comply with earlier versions of the specification, must still
-be supported such that applications continue to deploy. For the actual XSD files
-please visit `https://jakarta.ee/xml/ns/jakartaee/`.
+* goal
+   ** Jakarta Servlet Specification requirements -- for -- web container support of deployment descriptors
+* Deployment descriptor
+   ** -- conveys -- the web application's elements & configuration information, between
+      *** Application Developers,
+      *** Application Assemblers,
+      *** Deployers
+   ** -- is defined in terms of -- XML schema document
+      *** link:https://jakarta.ee/xml/ns/jakartaee/[actual .xsd]
+   ** backwards compatibility
+      *** == applications / written to previous versions of the Servlet API, are still supported
 
 === Deployment Descriptor Elements
 
-The following types of configuration and
-deployment information are required to be supported in the web
-application deployment descriptor for all servlet containers:
+* types of configuration + deployment information / are supported | web application deployment descriptor / ALL servlet containers
 
-* `ServletContext` Init Parameters
-* Session Configuration
-* Servlet Declaration
-* Servlet Mappings
-* Application Lifecyle Listener classes
-* Filter Definitions and Filter Mappings
-* MIME Type Mappings
-* Welcome File list
-* Error Pages
-* Locale and Encoding Mappings
-* Security configuration, including
-`login-config`, `security-constraint`, `deny-uncovered-http-methods`,
-`security-role`, `security-role-ref` and `run-as`
+   ** `ServletContext` Init Parameters
+   ** Session Configuration
+   ** Servlet Declaration
+   ** Servlet Mappings
+   ** Application Lifecyle Listener classes
+   ** Filter Definitions and Filter Mappings
+   ** MIME Type Mappings
+   ** Welcome File list
+   ** Error Pages
+   ** Locale and Encoding Mappings
+   ** Security configuration / 
+      *** `login-config`,
+      *** `security-constraint`,
+      *** `deny-uncovered-http-methods`,
+      *** `security-role`,
+      *** `security-role-ref`
+      *** `run-as`
 
 === Rules for Processing the Deployment Descriptor
 
-This section lists some general rules that web
-containers and developers must note concerning the processing of the
-deployment descriptor for a web application.
+* rules about the processing of the deployment descriptor | web application
+   ** Web containers -- must remove -- ALL leading and trailing whitespace / -- defined as -- `S(white space)` in link:http://www.w3.org/TR/2000/WD-xml-2e-20000814[XML 1.0]
+| deployment descriptor's text nodes' element content
 
-* Web containers must remove all leading and
-trailing whitespace, which is defined as `S(white space)` in XML 1.0
-(http://www.w3.org/TR/2000/WD-xml-2e-20000814), for the element
-content of the text nodes of a deployment descriptor.
-
-* The deployment descriptor must be valid
-against the schema. Web containers and tools that manipulate web
-applications have a wide range of options for checking the validity of a
-WAR. This includes checking the validity of the deployment descriptor
-document held within.
-+
-Additionally, it is recommended that web
-containers and tools that manipulate web applications provide a level of
-semantic checking. For example, it should be checked that a role
-referenced in a security constraint has the same name as one of the
-security roles defined in the deployment descriptor.
-+
-In cases of non-conformant web applications,
-tools and containers should inform the developer with descriptive error
-messages. High-end application server vendors are encouraged to supply
-this kind of validity checking in the form of a tool separate from the
-container.
-
-* The sub elements under `web-app` can be in an
-arbitrary order in this version of the specification. Because of the
-restriction of XML Schema, The multiplicity of the elements
-`distributable`, `session-config`, `welcome-file-list`, `jsp-config`,
-`login-config`, and `locale-encoding-mapping-list` was changed from
-`optional` to `0 or more`. The containers must inform the developer with
-a descriptive error message when the deployment descriptor contains more
-than one element of `session-config`, `jsp-config`, and `login-config`.
-The container must concatenate the items in `welcome-file-list` and
-`locale-encoding-mapping-list` when there are multiple occurrences. The
-multiple occurrence of `distributable` must be treated exactly in the
-same way as the single occurrence of `distributable`.
-
-* URI paths specified in the deployment
+   ** deployment descriptor -- must be valid against -- the schema
+      *** Web containers and tools / manipulate web applications,
+         **** -- have a -- wide range of options / check the validity of
+            ***** a WAR
+            ***** WAR's deployment descriptor document
+         **** -- provide a -- level of semantic checking
+            ***** _Example:_ check that a role / referenced | security, 's name == one of the deployment descriptor's security roles
+         **** if non-conformant web applications -> tools and containers -- should inform the developer with -- descriptive error messages
+            ***** recommendations: application server vendors -- should supply this validity checking as -- tool / -- separate from the -- container
+   ** sub elements | `web-app` -- can be in an -- arbitrary order
+      *** multiplicity of the elements -- was changed from -- `optional` - to -> [0,ANY)
+         **** referred elements are
+            ***** `distributable`
+            ***** `session-config`
+            ***** `welcome-file-list`
+            ***** `jsp-config`
+            ***** `login-config`
+            ***** `locale-encoding-mapping-list` 
+         **** Reason: 🧠 restriction of XML Schema 🧠
+         **** if deployment descriptor contains >1 element `session-config`, `jsp-config`, and `login-config` -> containers -- should inform the developer with -- descriptive error messages
+         **** if there are multiple occurrences -> container -- must concatenate the items in -- `welcome-file-list` and `locale-encoding-mapping-list`
+         **** treatment of multiple occurrence of `distributable` == treatment of 1! occurrence of `distributable`
+   ** TODO: URI paths specified in the deployment
 descriptor are assumed to be in URL-decoded form. The containers must
 inform the developer with a descriptive error message when URL contains
 `CR(#xD)` or `LF(#xA)`. The containers must preserve all other
 characters including whitespace in URL.
 
-* Containers must attempt to canonicalize paths
+   ** Containers must attempt to canonicalize paths
 in the deployment descriptor. For example, paths of the form `/a/../b`
 must be interpreted as `/b`. Paths beginning or resolving to paths that
 begin with `../` are not valid paths in the deployment descriptor.
 
-* URI paths referring to a resource relative to
+   ** URI paths referring to a resource relative to
 the root of the WAR, or a path mapping relative to the root of the WAR,
 unless otherwise specified, should begin with a leading `"/"`.
 
-* In elements whose value is an enumerated type,
+   ** In elements whose value is an enumerated type,
 the value is case sensitive.
 
 === Deployment Descriptor
