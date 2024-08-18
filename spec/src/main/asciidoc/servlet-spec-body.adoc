@@ -7521,27 +7521,18 @@ loss of session information.
          **** if deployment descriptor contains >1 element `session-config`, `jsp-config`, and `login-config` -> containers -- should inform the developer with -- descriptive error messages
          **** if there are multiple occurrences -> container -- must concatenate the items in -- `welcome-file-list` and `locale-encoding-mapping-list`
          **** treatment of multiple occurrence of `distributable` == treatment of 1! occurrence of `distributable`
-   ** TODO: URI paths specified in the deployment
-descriptor are assumed to be in URL-decoded form. The containers must
-inform the developer with a descriptive error message when URL contains
-`CR(#xD)` or `LF(#xA)`. The containers must preserve all other
-characters including whitespace in URL.
-
-   ** Containers must attempt to canonicalize paths
-in the deployment descriptor. For example, paths of the form `/a/../b`
-must be interpreted as `/b`. Paths beginning or resolving to paths that
-begin with `../` are not valid paths in the deployment descriptor.
-
-   ** URI paths referring to a resource relative to
-the root of the WAR, or a path mapping relative to the root of the WAR,
-unless otherwise specified, should begin with a leading `"/"`.
-
-   ** In elements whose value is an enumerated type,
-the value is case sensitive.
+   ** URI paths / specified | deployment descriptor -- are assumed to be in -- URL-decoded form
+      *** if URL contains `CR(#xD)` or `LF(#xA)`  -> containers -- should inform the developer with -- descriptive error messages
+      *** containers -- must preserve -- ALL other characters (including whitespace | URL)
+   ** Containers -- must attempt to canonicalize -- paths | deployment descriptor
+      *** _Example:_ paths of the form `/a/../b` -- must be interpreted as -- `/b`
+         **** Reason: 🧠 Paths beginning or resolving to paths that begin with `../` -- are NOT valid paths | deployment descriptor 🧠
+   ** URI paths / refer to a resource relative to the root of the WAR, OR a path mapping relative to the root of the WAR -- unless otherwise specified, should begin with a -- leading `"/"`
+   ** if elements / value is an enumerated type -> value is case sensitive
 
 === Deployment Descriptor
 
-The deployment descriptor for this revision
+TODO:The deployment descriptor for this revision
 of the specification is available at
 `https://jakarta.ee/xml/ns/jakartaee/web-app_{spec-version-underscore}.xsd`
 
