@@ -7534,15 +7534,13 @@ loss of session information.
 
 * deployment descriptor specification `https://jakarta.ee/xml/ns/jakartaee/web-app_{spec-version-underscore}.xsd`
 
-
 === Examples
 
-TODO:
-The following examples illustrate the usage
-of the definitions listed in the deployment descriptor schema.
+* how to use the deployment descriptor schema
 
 ==== A Basic Example
 
+TODO: Check
 .Basic Deployment Descriptor Example
 
 [source,xml,subs="attributes"]
@@ -7601,6 +7599,7 @@ of the definitions listed in the deployment descriptor schema.
 
 ==== An Example of Security
 
+TODO: Check
 .Deployment Descriptor Example Using Security
 [source,xml,subs="attributes"]
 ----
