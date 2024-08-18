@@ -7532,13 +7532,12 @@ loss of session information.
 
 === Deployment Descriptor
 
-TODO:The deployment descriptor for this revision
-of the specification is available at
-`https://jakarta.ee/xml/ns/jakartaee/web-app_{spec-version-underscore}.xsd`
+* deployment descriptor specification `https://jakarta.ee/xml/ns/jakartaee/web-app_{spec-version-underscore}.xsd`
 
 
 === Examples
 
+TODO:
 The following examples illustrate the usage
 of the definitions listed in the deployment descriptor schema.
 
