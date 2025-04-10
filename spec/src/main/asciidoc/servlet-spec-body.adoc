@@ -1440,14 +1440,15 @@ argument and returns a `String` representation of a file on the local
 file system to which a path corresponds. The `getPathTranslated` method
 computes the real path of the `pathInfo` of the request.
 
-In situations where the servlet container
+* servlet container
 cannot determine a valid file path for these methods, such as when the
 web application is executed from an archive, on a remote file system not
 accessible locally, or in a database, these methods must return null.
-Resources inside the `META-INF/resources` directory of JAR file must be
-considered only if the container has unpacked them from their containing
-JAR file when a call to `getRealPath()` is made, and in this case MUST
-return the unpacked location.
+* resources | .jar's `META-INF/resources`
+    ** if `getRealPath()` is done & container has unpacked them from their containing
+JAR file ->
+        *** consider it
+        *** return the unpacked location
 
 === Non-Blocking IO
 
